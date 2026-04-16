@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Books — VARTHAMANAN</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <header class="nav">
+      <a href="index.html" class="logo">BOOKS</a>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="nav-active">Products</a></li>
+          <li><a href="index.html#contact-section">About</a></li>
+        </ul>
+        <button class="active" onclick="window.location.href='index.html#contact-section'">Contact</button>
+      </div>
+      <div class="lang">
+        <button onclick="filterLang('en')">EN</button>
+        <button onclick="filterLang('ta')">TA</button>
+      </div>
+    </header>
+
+    <!-- PRODUCTS HERO -->
+    <section class="products-hero">
+      <h1>All Study Materials</h1>
+      <p>Expert-curated books for every government exam — TNPSC, UPSC, SSC, Banking &amp; more</p>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="products-filter" id="filterBar">
+      <button class="filter-btn active" onclick="filterBooks('all', this)">All Books</button>
+      <button class="filter-btn" onclick="filterBooks('tnpsc', this)">TNPSC</button>
+      <button class="filter-btn" onclick="filterBooks('upsc', this)">UPSC</button>
+      <button class="filter-btn" onclick="filterBooks('ssc', this)">SSC</button>
+      <button class="filter-btn" onclick="filterBooks('banking', this)">Banking</button>
+      <button class="filter-btn" onclick="filterBooks('police', this)">Police</button>
+      <button class="filter-btn" onclick="filterBooks('railway', this)">Railway</button>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div class="products-grid" id="productsGrid"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">BOOKS</div>
+          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010.</p>
+          <div class="footer-social">
+            <a href="#">f</a><a href="#">in</a><a href="#">yt</a><a href="#">tw</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Books</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Exam Categories</h5>
+          <ul>
+            <li><a href="#">TNPSC Books</a></li>
+            <li><a href="#">UPSC Books</a></li>
+            <li><a href="#">SSC Books</a></li>
+            <li><a href="#">Banking Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 வர்த்தமானன் பதிப்பகம் · All rights reserved</p>
+        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </footer>
+
+    <script>
+      const books = [
+        {
+          id: 1, category: 'tnpsc',
+          title: 'தமிழ்நாடு அரசாங்கம் நிர்வாகம் ஆளுகை',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 575, original: 700, rating: 5,
+          badge: 'Best Seller',
+          img: 'https://covers.openlibrary.org/b/id/10523338-L.jpg'
+        },
+        {
+          id: 2, category: 'upsc',
+          title: 'UPSC Civil Services Complete Guide',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 850, original: 1000, rating: 4,
+          badge: 'New Arrival',
+          img: 'https://covers.openlibrary.org/b/id/11153222-L.jpg'
+        },
+        {
+          id: 3, category: 'ssc',
+          title: 'SSC Combined Graduate Level Exam Master',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 490, original: 600, rating: 3,
+          badge: 'Popular',
+          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg'
+        },
+        {
+          id: 4, category: 'banking',
+          title: 'SBI & IBPS Bank PO Complete Preparation',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 620, original: 750, rating: 5,
+          badge: 'Top Rated',
+          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
+        },
+        {
+          id: 5, category: 'police',
+          title: 'Tamil Nadu Police Constable Exam Guide',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 450, original: 550, rating: 4,
+          badge: 'Best Seller',
+          img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg'
+        },
+        {
+          id: 6, category: 'railway',
+          title: 'RRB NTPC Railway Recruitment Board Guide',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 530, original: 650, rating: 4,
+          badge: 'New Edition',
+          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
+        },
+        {
+          id: 7, category: 'tnpsc',
+          title: 'TNPSC Group 2 & 2A Comprehensive Guide',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 695, original: 850, rating: 5,
+          badge: 'Best Seller',
+          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
+        },
+        {
+          id: 8, category: 'upsc',
+          title: 'Indian History & Polity for UPSC Prelims',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 780, original: 950, rating: 5,
+          badge: 'Top Rated',
+          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg'
+        },
+        {
+          id: 9, category: 'ssc',
+          title: 'SSC MTS Multi Tasking Staff Complete Book',
+          author: 'வர்த்தமானன் பதிப்பகம்',
+          price: 420, original: 500, rating: 4,
+          badge: 'Popular',
+          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
+        },
+      ];
+
+      function stars(n) {
+        return '★'.repeat(n) + '☆'.repeat(5 - n);
+      }
+
+      function renderBooks(list) {
+        const grid = document.getElementById('productsGrid');
+        grid.innerHTML = list.map(b => `
+          <a class="product-card" href="product-detail.html?id=${b.id}">
+            <div class="product-card-img">
+              <img src="${b.img}" alt="${b.title}" />
+              <div class="product-badge">${b.badge}</div>
+            </div>
+            <div class="product-card-body">
+              <div class="product-category">${b.category.toUpperCase()}</div>
+              <h3>${b.title}</h3>
+              <div class="stars">${stars(b.rating)}</div>
+              <div class="product-card-footer">
+                <div class="product-price">Rs. ${b.price}</div>
+                <button class="product-buy-btn" onclick="event.preventDefault();window.location.href='product-detail.html?id=${b.id}'">View Details</button>
+              </div>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      function filterBooks(cat, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filtered = cat === 'all' ? books : books.filter(b => b.category === cat);
+        renderBooks(filtered);
+      }
+
+      function filterLang(l) { /* lang toggle placeholder */ }
+
+      // On load — check URL param
+      const urlParams = new URLSearchParams(window.location.search);
+      const cat = urlParams.get('cat');
+      if (cat) {
+        const matchBtn = [...document.querySelectorAll('.filter-btn')].find(b => b.textContent.toLowerCase() === cat);
+        if (matchBtn) filterBooks(cat, matchBtn);
+        else renderBooks(books);
+      } else {
+        renderBooks(books);
+      }
+    </script>
+  </body>
+</html>

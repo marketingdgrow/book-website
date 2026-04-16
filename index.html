@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VARTHAMANAN — Government Exam Books</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <header class="nav">
+      <a href="index.html" class="logo">BOOKS</a>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#contact-section">About</a></li>
+        </ul>
+        <button class="active" onclick="window.location.href='#contact-section'">Contact</button>
+      </div>
+      <div class="lang">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('ta')">TA</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1 id="title">Crack Government Exams Faster</h1>
+        <p id="subtitle">TNPSC, UPSC, SSC, Banking &amp; More</p>
+        <button class="cta" id="ctaBtn" onclick="window.location.href='products.html'">Buy Study Materials</button>
+      </div>
+      <div class="hero-center">
+        <div class="book-card">
+          <img src="https://covers.openlibrary.org/b/id/10523338-L.jpg" alt="Hero Book" />
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="vertical-text" id="authorLabel">Top Educator</div>
+        <div class="author-card">
+          <h4>TNPSC Guide</h4>
+          <p>Latest Edition</p>
+          <img src="https://covers.openlibrary.org/b/id/11153222-L.jpg" alt="TNPSC" />
+        </div>
+        <div class="audio-card">
+          <p id="audioLabel">Best Seller</p>
+          <h4>UPSC Complete Book</h4>
+          <div class="badge">Top Rankers Choice</div>
+        </div>
+      </div>
+      <div class="self"></div>
+    </section>
+
+    <!-- BROWSE CATEGORIES -->
+    <section class="booklist-category-new-section">
+      <div class="booklist-category-new-header">
+        <h3>Browse Categories</h3>
+        <a href="products.html">See All</a>
+      </div>
+      <div class="booklist-category-new-row">
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=tnpsc'">
+          <img src="https://covers.openlibrary.org/b/id/10523338-L.jpg" />
+          <p class="booklist-category-new-title">TNPSC</p>
+        </div>
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=upsc'">
+          <img src="https://covers.openlibrary.org/b/id/11153222-L.jpg" />
+          <p class="booklist-category-new-title">UPSC</p>
+        </div>
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=ssc'">
+          <img src="https://covers.openlibrary.org/b/id/10594765-L.jpg" />
+          <p class="booklist-category-new-title">SSC</p>
+        </div>
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=banking'">
+          <img src="https://covers.openlibrary.org/b/id/10909258-L.jpg" />
+          <p class="booklist-category-new-title">Banking</p>
+        </div>
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=police'">
+          <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" />
+          <p class="booklist-category-new-title">Police</p>
+        </div>
+        <div class="booklist-category-new-item" onclick="window.location.href='products.html?cat=railway'">
+          <img src="https://covers.openlibrary.org/b/id/10521267-L.jpg" />
+          <p class="booklist-category-new-title">Railway</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESTSELLERS -->
+    <section class="booklist-section">
+      <div class="booklist-container">
+        <div class="booklist-label"><p>Recent Bestsellers</p></div>
+        <div class="booklist-wrapper">
+          <div class="booklist-item" onclick="window.location.href='product-detail.html?id=1'" style="cursor:pointer">
+            <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" />
+            <div class="booklist-info">
+              <div class="booklist-stars">★★★★★</div>
+              <h4>தமிழ்நாடு அரசாங்கம் நிர்வாகம்</h4>
+              <p>வர்த்தமானன் பதிப்பகம்</p>
+              <button onclick="event.stopPropagation();window.location.href='product-detail.html?id=1'">Buy Now</button>
+            </div>
+          </div>
+          <div class="booklist-item" onclick="window.location.href='product-detail.html?id=2'" style="cursor:pointer">
+            <img src="https://covers.openlibrary.org/b/id/10521267-L.jpg" />
+            <div class="booklist-info">
+              <div class="booklist-stars">★★★★☆</div>
+              <h4>UPSC Complete Guide</h4>
+              <p>வர்த்தமானன் பதிப்பகம்</p>
+              <button onclick="event.stopPropagation();window.location.href='product-detail.html?id=2'">Buy Now</button>
+            </div>
+          </div>
+          <div class="booklist-item" onclick="window.location.href='product-detail.html?id=3'" style="cursor:pointer">
+            <img src="https://covers.openlibrary.org/b/id/10594765-L.jpg" />
+            <div class="booklist-info">
+              <div class="booklist-stars">★★★☆☆</div>
+              <h4>SSC Exam Master</h4>
+              <p>வர்த்தமானன் பதிப்பகம்</p>
+              <button onclick="event.stopPropagation();window.location.href='product-detail.html?id=3'">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / STATS -->
+    <section class="aboutsection-main">
+      <div class="aboutsection-top">
+        <h2>Books are a uniquely portable magic</h2>
+        <p>With every turn of the page, books transport us into different worlds, expand our thinking, and deepen our understanding of life.</p>
+      </div>
+      <div class="aboutsection-video">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600" />
+        <div class="aboutsection-play">▶</div>
+      </div>
+      <div class="aboutsection-stats">
+        <div><h3>600</h3><p>Articles</p></div>
+        <div><h3>40k</h3><p>Active Readers</p></div>
+        <div><h3>18k</h3><p>Books Published</p></div>
+      </div>
+      <div class="aboutsection-bottom">
+        <div class="aboutsection-image">
+          <div class="aboutsection-bg"></div>
+          <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400" />
+        </div>
+        <div class="aboutsection-text">
+          <span>Get Started</span>
+          <h3>The more that you read, the more things you will know</h3>
+          <p>Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.</p>
+          <div class="aboutsection-sign">— Muhammad Iqbal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+      <div class="why-heading-wrap">
+        <div class="why-kicker">Why Choose Us</div>
+        <h2 class="why-heading">The <span>#1 Trusted</span> Source for<br/>Government Exam Books</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">📚</div>
+          <h4>Expert-Curated Content</h4>
+          <p>Every book is crafted by top educators and exam specialists with 20+ years of experience in competitive exam preparation.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h4>Latest Syllabus Coverage</h4>
+          <p>All books are updated with the latest exam patterns and syllabus changes for TNPSC, UPSC, SSC, Banking and more.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚚</div>
+          <h4>Fast Doorstep Delivery</h4>
+          <p>Get your books delivered directly to your home within 3–5 business days anywhere in Tamil Nadu and across India.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h4>Best Price Guaranteed</h4>
+          <p>We offer the most competitive prices on all government exam study materials with no hidden charges.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h4>Proven Track Record</h4>
+          <p>Over 40,000 students have cleared government exams using our study materials. Your success is our mission.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <h4>Secure Easy Ordering</h4>
+          <p>Simple UPI payment system with instant order confirmation. Your data and transactions are completely secure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+      <div class="cta-tag">🎓 Limited Time Offer</div>
+      <h2>Ready to Crack Your<br/>Government Exam?</h2>
+      <p>Join 40,000+ successful candidates who trusted our study materials. Order now and start your journey to success.</p>
+      <div class="cta-buttons">
+        <a href="products.html" class="cta-btn-primary">Browse All Books</a>
+        <a href="#contact-section" class="cta-btn-secondary">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- CONTACT & MAP -->
+    <section class="contact-section" id="contact-section">
+      <div class="contact-heading-wrap">
+        <span class="contact-kicker">Get In Touch</span>
+        <h2 class="contact-heading">We're Here to Help You Succeed</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form-wrap">
+          <h3>Send Us a Message</h3>
+          <div class="cf-group">
+            <label>Your Name / உங்கள் பெயர்</label>
+            <input type="text" id="cf-name" placeholder="Enter your full name" />
+          </div>
+          <div class="cf-group">
+            <label>Phone Number / தொலைபேசி</label>
+            <input type="tel" id="cf-phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="cf-group">
+            <label>Subject / விஷயம்</label>
+            <select id="cf-subject">
+              <option value="">Select a topic</option>
+              <option>Book Order Enquiry</option>
+              <option>Delivery Status</option>
+              <option>Payment Issue</option>
+              <option>Bulk Order Request</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="cf-group">
+            <label>Message / செய்தி</label>
+            <textarea id="cf-message" placeholder="Write your message here..."></textarea>
+          </div>
+          <button class="cf-submit" onclick="submitContact()">Send Message →</button>
+        </div>
+        <div class="map-info-wrap">
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62965.13085788316!2d78.08339764999999!3d9.919314199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f5a26d!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1710000000000"
+              allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="ci-icon">📍</div>
+              <div class="ci-text">
+                <h5>Our Address</h5>
+                <p>வர்த்தமானன் பதிப்பகம்,<br/>Madurai, Tamil Nadu — 625001</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="ci-icon">📞</div>
+              <div class="ci-text">
+                <h5>Phone / WhatsApp</h5>
+                <p>+91 98765 43210<br/>Mon–Sat, 9 AM – 6 PM</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="ci-icon">📧</div>
+              <div class="ci-text">
+                <h5>Email</h5>
+                <p>orders@varthamanan.in<br/>We reply within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">BOOKS</div>
+          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010. Serving 40,000+ students across Tamil Nadu.</p>
+          <div class="footer-social">
+            <a href="#">f</a>
+            <a href="#">in</a>
+            <a href="#">yt</a>
+            <a href="#">tw</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Books</a></li>
+            <li><a href="#contact-section">About Us</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Exam Categories</h5>
+          <ul>
+            <li><a href="products.html?cat=tnpsc">TNPSC Books</a></li>
+            <li><a href="products.html?cat=upsc">UPSC Books</a></li>
+            <li><a href="products.html?cat=ssc">SSC Books</a></li>
+            <li><a href="products.html?cat=banking">Banking Books</a></li>
+            <li><a href="products.html?cat=railway">Railway Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 வர்த்தமானன் பதிப்பகம் · All rights reserved</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">✅ <span>Message sent!</span> We'll get back to you soon.</div>
+
+    <script>
+      const content = {
+        en: {
+          title: "Crack Government Exams Faster",
+          subtitle: "TNPSC, UPSC, SSC, Banking & More",
+          authorLabel: "Top Educator",
+          audioLabel: "Best Seller",
+          cta: "Buy Study Materials",
+        },
+        ta: {
+          title: "அரசு தேர்வில் வெற்றி பெறுங்கள்",
+          subtitle: "TNPSC, UPSC, SSC மற்றும் பிற தேர்வுகள்",
+          authorLabel: "சிறந்த ஆசிரியர்",
+          audioLabel: "சிறந்த விற்பனை",
+          cta: "புத்தகங்களை வாங்க",
+        },
+      };
+
+      function setLang(lang) {
+        document.getElementById("title").innerText = content[lang].title;
+        document.getElementById("subtitle").innerText = content[lang].subtitle;
+        document.getElementById("authorLabel").innerText = content[lang].authorLabel;
+        document.getElementById("audioLabel").innerText = content[lang].audioLabel;
+        document.getElementById("ctaBtn").innerText = content[lang].cta;
+      }
+
+      function submitContact() {
+        const name = document.getElementById('cf-name').value.trim();
+        if (!name) { alert('Please enter your name.'); return; }
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+        document.getElementById('cf-name').value = '';
+        document.getElementById('cf-phone').value = '';
+        document.getElementById('cf-subject').value = '';
+        document.getElementById('cf-message').value = '';
+      }
+    </script>
+  </body>
+</html>
