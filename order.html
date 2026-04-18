@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="./order-style.css" />
   </head>
   <body>
@@ -15,7 +16,7 @@
     <header style="display:flex;justify-content:space-between;align-items:center;padding:18px 40px;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-bottom:1px solid #f0e8f5;position:sticky;top:0;z-index:100;">
       <a href="index.html" style="font-weight:bold;letter-spacing:2px;font-size:18px;color:#b85b92;text-decoration:none;font-family:Georgia,serif;">BOOKS</a>
       <div style="display:flex;gap:12px;align-items:center;">
-        <a href="products.html" style="color:#b85b92;text-decoration:none;font-family:Georgia,serif;font-size:14px;">← Back to Products</a>
+        <a href="products.html" style="color:#b85b92;text-decoration:none;font-family:Georgia,serif;font-size:14px;"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Products</a>
       </div>
     </header>
 
@@ -51,9 +52,7 @@
         <div class="card">
           <div class="card-header">
             <div class="card-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-              </svg>
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
             </div>
             <div>
               <div class="card-title">தனிப்பட்ட விவரங்கள்</div>
@@ -78,9 +77,7 @@
         <div class="card">
           <div class="card-header">
             <div class="card-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
-              </svg>
+              <i class="fa-solid fa-book-open" aria-hidden="true"></i>
             </div>
             <div>
               <div class="card-title">புத்தக தேர்வு</div>
@@ -100,9 +97,7 @@
         <div class="card">
           <div class="card-header">
             <div class="card-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/>
-              </svg>
+              <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
             </div>
             <div>
               <div class="card-title">கட்டணம் செலுத்துங்கள்</div>
@@ -153,15 +148,13 @@
             <div class="upload-zone" id="uploadZone">
               <input type="file" id="paymentFile" accept="image/*,.pdf" onchange="handleUpload(this)" ondragover="this.parentElement.classList.add('dragover')" ondragleave="this.parentElement.classList.remove('dragover')" />
               <div class="upload-icon-wrap">
-                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
-                </svg>
+                <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
               </div>
               <div class="upload-main-text">Click to upload or drag &amp; drop</div>
               <div class="upload-sub-text">JPG, PNG, PDF · Max 10 MB</div>
             </div>
             <div class="upload-success" id="uploadSuccess">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.75l6 6 9-13.5"/></svg>
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
               <span id="uploadSuccessText">File uploaded successfully</span>
             </div>
           </div>
@@ -171,10 +164,7 @@
         <div class="card">
           <div class="card-header">
             <div class="card-icon">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
-              </svg>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
             </div>
             <div>
               <div class="card-title">டெலிவரி முகவரி</div>
@@ -203,9 +193,7 @@
 
         <!-- Notice -->
         <div class="notice">
-          <svg class="notice-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
-          </svg>
+          <i class="fa-solid fa-triangle-exclamation notice-icon" aria-hidden="true"></i>
           <div class="notice-text">
             <strong>முக்கியமான குறிப்பு · Important Note</strong>
             தயவுசெய்து சரியான முகவரி மற்றும் பின்கோடை உள்ளிடவும். தவறான முகவரியில் புத்தகம் அனுப்ப இயலாது.
@@ -221,9 +209,7 @@
               <span class="tamil-text">ஆர்டரை சமர்ப்பிக்கவும் ·</span>
               Submit Order
             </span>
-            <svg id="btnArrow" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-            </svg>
+            <i id="btnArrow" class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </button>
         </div>
       </div>
@@ -231,9 +217,7 @@
       <!-- Success Screen -->
       <div class="success-screen" id="successScreen">
         <div class="success-ring">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4.5 12.75l6 6 9-13.5"/>
-          </svg>
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
         </div>
         <h2 class="success-title">Order Confirmed!</h2>
         <p class="success-msg">Your book order has been successfully submitted. We'll process and dispatch it shortly.</p>
@@ -268,6 +252,10 @@
       const urlParams = new URLSearchParams(window.location.search);
       const selectedId = parseInt(urlParams.get('id')) || 1;
       const selectedBook = books.find(b => b.id === selectedId) || books[0];
+      const backToProductsLink = document.querySelector('a[href="products.html"]');
+      if (backToProductsLink) {
+        backToProductsLink.innerHTML = '<i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Products';
+      }
 
       // Update preview
       document.getElementById('previewImg').src = selectedBook.img;
@@ -311,6 +299,7 @@
         uploadedFile = input.files[0];
         const el = document.getElementById('uploadSuccess');
         document.getElementById('uploadSuccessText').textContent = '✓ ' + uploadedFile.name;
+        document.getElementById('uploadSuccessText').textContent = uploadedFile.name;
         el.classList.add('show');
         document.getElementById('uploadZone').style.borderColor = 'var(--green)';
         input.parentElement.classList.remove('dragover');
@@ -397,7 +386,7 @@
           btn.disabled = false;
           document.getElementById('spinner').style.display = 'none';
           document.getElementById('btnText').style.display = 'inline';
-          document.getElementById('btnArrow').style.display = 'inline';
+          document.getElementById('btnArrow').style.display = 'inline-flex';
           alert('Submission failed. Please try again.\n' + err.message);
         }
       }
@@ -419,7 +408,7 @@
         btn.disabled = false;
         document.getElementById('spinner').style.display = 'none';
         document.getElementById('btnText').style.display = 'inline';
-        document.getElementById('btnArrow').style.display = 'inline';
+        document.getElementById('btnArrow').style.display = 'inline-flex';
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     </script>

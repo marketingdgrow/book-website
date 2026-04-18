@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -284,7 +286,8 @@ body::after {
 .booklist-item img { width: 180px; height: 250px; object-fit: cover; border-radius: 6px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 .booklist-info h4 { font-size: 16px; margin: 5px 0; }
 .booklist-info p { font-size: 13px; color: #ede2e2; }
-.booklist-stars { color: #d6ab2b; font-size: 14px; }
+.booklist-stars { color: #d6ab2b; font-size: 14px; display: flex; align-items: center; gap: 2px; }
+.booklist-stars i { font-size: 14px; }
 .booklist-info button { margin-top: 8px; padding: 6px 14px; border-radius: 20px; border: 1px solid #ddd; background: transparent; cursor: pointer; font-size: 12px; transition: 0.3s; }
 .booklist-item:hover { transform: translateY(-5px); }
 .booklist-item:hover button { background: #d678ac; color: #fff; border-color: #d678ac; }
@@ -318,6 +321,7 @@ body::after {
   display: flex; align-items: center; justify-content: center;
   font-size: 20px; cursor: pointer;
 }
+.aboutsection-play i { color: #b85b92; font-size: 18px; }
 .aboutsection-stats { display: flex; justify-content: center; gap: 80px; margin: 30px 0; }
 .aboutsection-stats h3 { color: #d678ac; font-size: 22px; }
 .aboutsection-stats p { font-size: 12px; color: #777; }
@@ -392,6 +396,7 @@ body::after {
   border-radius: 18px; display: flex; align-items: center;
   justify-content: center; font-size: 28px;
 }
+.why-icon i { font-size: 26px; color: #b85b92; }
 .why-card h4 { font-size: 18px; color: #2d1a24; margin-bottom: 10px; }
 .why-card p { font-size: 14px; color: #888; line-height: 1.7; }
 @media (max-width: 900px) {
@@ -420,6 +425,7 @@ body::after {
   border-radius: 30px; margin-bottom: 24px;
   border: 1px solid rgba(255,255,255,0.3);
 }
+.final-cta-section .cta-tag i { margin-right: 8px; }
 .final-cta-section h2 {
   font-size: 44px; color: white; line-height: 1.2;
   margin-bottom: 16px; font-weight: bold;
@@ -482,6 +488,7 @@ body::after {
   display: flex; align-items: center; justify-content: center;
   font-size: 20px; flex-shrink: 0;
 }
+.ci-icon i { color: #b85b92; font-size: 18px; }
 .ci-text h5 { font-size: 14px; color: #2d1a24; margin-bottom: 3px; }
 .ci-text p { font-size: 13px; color: #888; line-height: 1.5; }
 @media (max-width: 900px) {
@@ -504,6 +511,7 @@ body::after {
   border-radius: 8px; display: flex; align-items: center; justify-content: center;
   color: white; text-decoration: none; font-size: 14px; transition: 0.2s;
 }
+.footer-social a i { font-size: 15px; line-height: 1; }
 .footer-social a:hover { background: #d678ac; }
 .footer-col h5 { font-size: 14px; color: white; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
 .footer-col ul { list-style: none; }
@@ -570,7 +578,7 @@ body::after {
 .product-card-body { padding: 20px; }
 .product-category { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #d678ac; margin-bottom: 6px; }
 .product-card-body h3 { font-size: 16px; color: #2d1a24; margin-bottom: 8px; line-height: 1.4; }
-.product-card-body .stars { color: #d6ab2b; font-size: 13px; margin-bottom: 10px; }
+.product-card-body .stars { color: #d6ab2b; font-size: 13px; margin-bottom: 10px; display: flex; align-items: center; gap: 2px; }
 .product-card-footer { display: flex; justify-content: space-between; align-items: center; }
 .product-price { font-size: 18px; font-weight: bold; color: #b85b92; }
 .product-buy-btn {
@@ -604,7 +612,7 @@ body::after {
 .detail-cat { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #d678ac; margin-bottom: 10px; }
 .detail-title { font-size: 32px; color: #2d1a24; line-height: 1.2; margin-bottom: 8px; }
 .detail-author { font-size: 15px; color: #888; margin-bottom: 16px; font-style: italic; }
-.detail-stars { color: #d6ab2b; font-size: 16px; margin-bottom: 20px; }
+.detail-stars { color: #d6ab2b; font-size: 16px; margin-bottom: 20px; display: flex; align-items: center; gap: 3px; }
 .detail-price-wrap { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
 .detail-price { font-size: 36px; font-weight: bold; color: #b85b92; }
 .detail-original-price { font-size: 18px; color: #ccc; text-decoration: line-through; }
@@ -623,13 +631,13 @@ body::after {
   color: white; border: none; border-radius: 14px;
   font-size: 16px; font-weight: bold; cursor: pointer;
   transition: 0.3s; font-family: Georgia, serif; text-align: center;
-  text-decoration: none; display: inline-block;
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
 }
 .detail-order-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184,91,146,0.3); }
 .detail-wishlist-btn {
   padding: 16px 20px; background: white; color: #b85b92;
   border: 2px solid #d678ac; border-radius: 14px; font-size: 20px;
-  cursor: pointer; transition: 0.2s;
+  cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center;
 }
 .detail-wishlist-btn:hover { background: #fce8f3; }
 .related-section { padding: 0 60px 80px; }
@@ -653,7 +661,9 @@ body::after {
   transform: translateY(100px); opacity: 0;
   transition: all 0.4s ease;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  display: flex; align-items: center; gap: 8px;
 }
+.toast i { color: #7fe3a2; }
 .toast.show { transform: translateY(0); opacity: 1; }
 .toast span { color: #d6ab2b; }
 
@@ -1652,5 +1662,367 @@ body::after {
 
   .product-buy-btn {
     font-size: 13px;
+  }
+}
+
+/* ============================================
+   PREMIUM TYPOGRAPHY + THEME REFINEMENT
+   Layout-safe visual upgrade layer
+   ============================================ */
+:root {
+  --prem-bg-1: #fffaf4;
+  --prem-bg-2: #f8f2ea;
+  --prem-ink: #261b30;
+  --prem-muted: #5f5268;
+  --prem-primary: #b55a8f;
+  --prem-accent: #c79a2a;
+  --prem-card: rgba(255, 255, 255, 0.88);
+  --prem-border: rgba(124, 92, 128, 0.14);
+  --prem-shadow: 0 10px 34px rgba(66, 39, 69, 0.08);
+  --prem-shadow-soft: 0 4px 18px rgba(66, 39, 69, 0.06);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Manrope", "Noto Sans Tamil", "Segoe UI", sans-serif;
+  color: var(--prem-ink);
+  font-weight: 500;
+  line-height: 1.68;
+  background:
+    radial-gradient(900px 560px at -8% -14%, rgba(199, 154, 42, 0.18), transparent 66%),
+    radial-gradient(1100px 620px at 112% 0%, rgba(181, 90, 143, 0.14), transparent 63%),
+    linear-gradient(180deg, var(--prem-bg-1) 0%, var(--prem-bg-2) 55%, #f5efe7 100%);
+}
+
+p,
+a,
+li,
+button,
+input,
+textarea,
+select,
+option,
+label,
+small,
+span,
+div {
+  font-family: "Manrope", "Noto Sans Tamil", "Segoe UI", sans-serif;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(181, 90, 143, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(181, 90, 143, 0.08) 1px, transparent 1px);
+  background-size: 46px 46px;
+  animation: gridMove 24s linear infinite;
+}
+
+body::after {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(181, 90, 143, 0.14), transparent 42%),
+    radial-gradient(circle at 82% 74%, rgba(199, 154, 42, 0.12), transparent 44%);
+  animation: glowMove 12s ease-in-out infinite alternate;
+}
+
+h1, h2, h3, h4, h5,
+h1 span, h2 span, h3 span, h4 span, h5 span,
+.logo,
+.hero-left h1,
+.products-hero h1,
+.detail-title,
+.why-heading,
+.contact-heading,
+.final-cta-section h2,
+.footer-brand .footer-logo {
+  font-family: "Newsreader", "Noto Sans Tamil", Georgia, serif;
+  letter-spacing: 0.2px;
+}
+
+.nav {
+  background: rgba(255, 249, 241, 0.9);
+  border-bottom: 1px solid var(--prem-border);
+  box-shadow: 0 4px 22px rgba(84, 46, 84, 0.05);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--prem-primary);
+}
+
+.nav-menu ul li a {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #7b486f;
+}
+
+.nav-menu button,
+.lang button {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.hero-left h1 {
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+  line-height: 1.06;
+  font-weight: 700;
+}
+
+.hero-left p {
+  font-size: 1.02rem;
+  color: var(--prem-muted);
+  max-width: 36ch;
+}
+
+.cta,
+.cta-btn-primary,
+.cta-btn-secondary,
+.cf-submit,
+.product-buy-btn,
+.detail-order-btn,
+.filter-btn {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.booklist-section {
+  background: linear-gradient(140deg, #9d3f73 0%, #b85b92 42%, #d678ac 100%);
+}
+
+.booklist-label {
+  font-weight: 600;
+}
+
+.booklist-info h4 {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.aboutsection-top h2,
+.why-heading,
+.contact-heading,
+.related-section h2 {
+  font-weight: 700;
+}
+
+.aboutsection-top p,
+.aboutsection-text p,
+.why-card p,
+.contact-section p,
+.footer-brand p {
+  color: var(--prem-muted);
+  font-size: 0.97rem;
+  line-height: 1.78;
+}
+
+.products-hero h1 {
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-weight: 700;
+}
+
+.products-hero p {
+  font-size: 1.02rem;
+  color: var(--prem-muted);
+}
+
+.product-card,
+.why-card,
+.contact-form-wrap,
+.contact-info-card,
+.detail-specs,
+.detail-img-wrap,
+.product-card-img {
+  border: 1px solid var(--prem-border);
+  box-shadow: var(--prem-shadow-soft);
+}
+
+.product-card,
+.why-card,
+.contact-form-wrap,
+.contact-info-card,
+.detail-specs {
+  background: var(--prem-card);
+  backdrop-filter: blur(6px);
+}
+
+.product-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.product-price {
+  font-size: 1.22rem;
+  font-weight: 800;
+}
+
+.product-category {
+  font-weight: 700;
+}
+
+.detail-title {
+  font-size: clamp(1.95rem, 3.2vw, 2.55rem);
+  line-height: 1.14;
+  font-weight: 700;
+}
+
+.detail-author {
+  color: var(--prem-muted);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.detail-desc {
+  font-size: 1rem;
+  color: var(--prem-muted);
+  line-height: 1.82;
+}
+
+.detail-specs h4 {
+  font-weight: 700;
+}
+
+.spec-row {
+  font-size: 0.95rem;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #776a80;
+}
+
+.spec-val {
+  font-weight: 700;
+}
+
+.final-cta-section {
+  background: linear-gradient(140deg, #9f4a79 0%, #b85b92 45%, #d6ab2b 100%);
+}
+
+.final-cta-section h2 {
+  font-size: clamp(2rem, 3.8vw, 2.95rem);
+  font-weight: 700;
+}
+
+.final-cta-section p {
+  font-size: 1.03rem;
+  line-height: 1.74;
+}
+
+.contact-form-wrap h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.cf-group label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #6d6079;
+}
+
+.cf-group input,
+.cf-group textarea,
+.cf-group select {
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.site-footer {
+  background: linear-gradient(160deg, #241725 0%, #2d1a24 44%, #3b2338 100%);
+}
+
+.footer-col h5 {
+  font-weight: 700;
+}
+
+.footer-col ul li a,
+.footer-bottom p,
+.footer-bottom-links a {
+  font-weight: 500;
+}
+
+.toast {
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 1024px) {
+  .hero-left h1 {
+    font-size: clamp(2.05rem, 5vw, 2.85rem);
+  }
+
+  .why-heading {
+    font-size: clamp(2rem, 4vw, 2.4rem);
+  }
+
+  .contact-heading {
+    font-size: clamp(1.85rem, 4vw, 2.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu ul li a {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(1.95rem, 9vw, 2.45rem);
+  }
+
+  .hero-left p,
+  .products-hero p,
+  .detail-desc {
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .products-hero h1 {
+    font-size: clamp(1.75rem, 8vw, 2.1rem);
+  }
+
+  .why-heading {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+
+  .contact-heading {
+    font-size: clamp(1.65rem, 7.2vw, 2rem);
+  }
+
+  .detail-title {
+    font-size: clamp(1.65rem, 7.2vw, 2rem);
+  }
+
+  .booklist-info h4,
+  .product-card-body h3 {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.08rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    line-height: 1.64;
+  }
+
+  .hero-left p {
+    max-width: none;
+  }
+
+  .cf-group label {
+    font-size: 0.84rem;
+  }
+
+  .cf-group input,
+  .cf-group textarea,
+  .cf-group select {
+    font-size: 0.93rem;
   }
 }

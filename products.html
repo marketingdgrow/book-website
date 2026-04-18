@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Books — VARTHAMANAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -52,7 +53,10 @@
           <div class="footer-logo">BOOKS</div>
           <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010.</p>
           <div class="footer-social">
-            <a href="#">f</a><a href="#">in</a><a href="#">yt</a><a href="#">tw</a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -164,7 +168,9 @@
       ];
 
       function stars(n) {
-        return '★'.repeat(n) + '☆'.repeat(5 - n);
+        return Array.from({ length: 5 }, (_, i) =>
+          `<i class="${i < n ? 'fa-solid' : 'fa-regular'} fa-star" aria-hidden="true"></i>`
+        ).join('');
       }
 
       function renderBooks(list) {
