@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VARTHAMANAN — Government Exam Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
 
     <!-- NAV -->
     <header class="nav">
-      <a href="index.html" class="logo">BOOKS</a>
-      <div class="nav-menu">
-        <ul>
-          <li><a href="index.html" class="nav-active">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="#contact-section">About</a></li>
-        </ul>
-        <button class="active" onclick="window.location.href='#contact-section'">Contact</button>
-      </div>
-      <div class="lang">
-        <button onclick="setLang('en')">EN</button>
-        <button onclick="setLang('ta')">TA</button>
-      </div>
-    </header>
+  <a href="index.html" class="logo">BOOKS</a>
+
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="index.html" class="nav-active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#contact-section">About</a></li>
+    </ul>
+    <div class="nav-lang-mobile">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('ta')">TA</button>
+    </div>
+    <button class="active" onclick="window.location.href='#contact-section'">Contact</button>
+  </div>
+
+  <div class="lang" id="langDesktop">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ta')">TA</button>
+  </div>
+</header>
 
     <!-- HERO -->
     <section class="hero">
@@ -327,6 +340,35 @@
     <div class="toast" id="toast">✅ <span>Message sent!</span> We'll get back to you soon.</div>
 
     <script>
+
+  function toggleMenu() {
+  const menu = document.getElementById('navMenu');
+  const btn = document.getElementById('hamburger');
+  let overlay = document.getElementById('navOverlay');
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    overlay.id = 'navOverlay';
+    overlay.onclick = toggleMenu;
+    document.body.appendChild(overlay);
+  }
+
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  overlay.classList.toggle('show');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+
+// Menu link click-la auto close
+document.querySelectorAll('.nav-menu a, .nav-menu .active').forEach(el => {
+  el.addEventListener('click', () => {
+    const menu = document.getElementById('navMenu');
+    if (menu.classList.contains('open')) toggleMenu();
+  });
+});
+
+
       const content = {
         en: {
           title: "Crack Government Exams Faster",

@@ -128,3 +128,408 @@ textarea { resize:vertical; min-height:88px; line-height:1.6; }
   .form-row{grid-template-columns:1fr;gap:12px}
   .payment-grid{grid-template-columns:1fr}
 }
+
+
+/* ============================================
+   ORDER PAGE (order.html) — RESPONSIVE CSS
+   Mobile & Tablet only.
+   Paste at the END of your order-style.css
+   ============================================ */
+
+/* ── TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+
+  .page-wrap {
+    max-width: 600px;
+    padding: 40px 28px 70px;
+  }
+
+  .header-title {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 24px 24px 20px;
+  }
+
+  .payment-grid {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+
+  .qr-frame {
+    min-width: 140px;
+  }
+}
+
+
+/* ── MOBILE (max 600px) ── */
+@media (max-width: 600px) {
+
+  /* TOP NAV */
+  header[style] {
+    padding: 14px 16px !important;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* PAGE WRAP */
+  .page-wrap {
+    padding: 28px 14px 60px;
+    max-width: 100%;
+  }
+
+  /* SITE HEADER */
+  .site-header {
+    margin-bottom: 28px;
+  }
+
+  .header-kicker {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .header-kicker::before,
+  .header-kicker::after {
+    width: 18px;
+  }
+
+  .header-title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .header-subtitle {
+    font-size: 13px;
+  }
+
+  .header-divider span {
+    width: 28px;
+  }
+
+  /* SELECTED BOOK PREVIEW */
+  #selectedBookPreview {
+    padding: 12px 14px !important;
+    gap: 12px !important;
+    border-radius: 12px !important;
+    flex-wrap: wrap;
+  }
+
+  #selectedBookPreview img {
+    width: 48px !important;
+    height: 64px !important;
+  }
+
+  #previewTitle {
+    font-size: 14px !important;
+  }
+
+  #previewCat {
+    font-size: 10px !important;
+  }
+
+  #previewPrice {
+    font-size: 13px !important;
+  }
+
+  #selectedBookPreview a {
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+    margin-left: 0 !important;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 18px 14px 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .card-header {
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .card-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .card-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-subtitle {
+    font-size: 10px;
+  }
+
+  /* FORM ROWS */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  label {
+    font-size: 11px;
+  }
+
+  .tamil-label {
+    font-size: 12px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+
+  /* BOOK SELECTION CARDS */
+  .book-card {
+    padding: 12px;
+    border-radius: 10px;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .book-card input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .book-name {
+    font-size: 13px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  .price-tag {
+    font-size: 12px;
+    padding: 2px 10px;
+  }
+
+  .avail-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  /* PAYMENT SECTION */
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .qr-frame {
+    min-width: unset;
+    width: 160px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .qr-label {
+    font-size: 10px;
+  }
+
+  .amount-display {
+    font-size: 20px;
+    padding: 7px 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .payment-steps {
+    gap: 7px;
+  }
+
+  .payment-step {
+    font-size: 12px;
+    gap: 8px;
+    line-height: 1.45;
+  }
+
+  .payment-step .ps-num {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  /* UPLOAD ZONE */
+  .upload-zone {
+    padding: 22px 14px;
+    border-radius: 10px;
+  }
+
+  .upload-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .upload-icon-wrap svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .upload-main-text {
+    font-size: 13px;
+  }
+
+  .upload-sub-text {
+    font-size: 11px;
+  }
+
+  .upload-success {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  /* NOTICE */
+  .notice {
+    padding: 12px 14px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .notice-icon {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+  }
+
+  .notice-text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .notice-text strong {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  /* SUBMIT BUTTON */
+  .btn-submit {
+    padding: 15px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    gap: 8px;
+  }
+
+  .btn-submit .tamil-text {
+    font-size: 13px;
+  }
+
+  .btn-submit svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* SUCCESS SCREEN */
+  .success-screen {
+    padding: 40px 14px;
+  }
+
+  .success-ring {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 18px;
+  }
+
+  .success-ring svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .success-title {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .success-msg {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .success-msg-ta {
+    font-size: 13px;
+  }
+
+  .success-ref {
+    font-size: 12px;
+    padding: 7px 16px;
+    margin-top: 14px;
+  }
+
+  .btn-new-order {
+    padding: 11px 22px;
+    font-size: 13px;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+
+  /* FOOTER */
+  .page-footer {
+    font-size: 11px;
+    margin-top: 28px;
+  }
+}
+
+
+/* ── VERY SMALL (max 380px) ── */
+@media (max-width: 380px) {
+
+  .header-title {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+
+  .book-name {
+    font-size: 12px;
+  }
+
+  .amount-display {
+    font-size: 18px;
+  }
+
+  .btn-submit {
+    font-size: 13px;
+    padding: 14px 14px;
+  }
+
+  .success-title {
+    font-size: 22px;
+  }
+
+  /* Success buttons stack */
+  #successScreen > div[style] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .btn-new-order {
+    width: 100%;
+    justify-content: center;
+  }
+}
