@@ -247,8 +247,14 @@ body::after {
 
 /* HERO */
 .hero {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 50px 60px; position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+  min-height: 75vh; 
 }
 .hero-left { width: 300px; }
 .hero-left h1 { font-size: 48px; line-height: 1.1; }
@@ -310,6 +316,16 @@ body::after {
   .booklist-container { flex-direction: column; }
   .booklist-label { writing-mode: horizontal-tb; transform: none; }
   .booklist-wrapper { flex-direction: column; gap: 25px; }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px 50px;
+    gap: 24px;
+    min-height: 100svh; 
+  }
 }
 
 /* BROWSE CATEGORIES */
