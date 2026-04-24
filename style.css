@@ -4,13 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
   font-family: "Georgia", serif;
 }
 
 /* ANIMATED GRID BACKGROUND */
-body {
+html, body {
   background: #f6f2ed;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 
@@ -156,27 +158,29 @@ body::after {
   /* Hamburger show */
   .hamburger { display: flex; }
 
-  /* Full screen dropdown menu */
+  @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
+    width: 80%;
     max-width: 300px;
     height: 100vh;
     background: rgba(246, 242, 237, 0.98);
     backdrop-filter: blur(16px);
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
-    padding: 60px 36px;
+    justify-content: flex-start;       /* top-a irundhu start */
+    padding: 80px 28px 40px;           /* top padding — hamburger below */
+    gap: 8px;
     box-shadow: -4px 0 30px rgba(184, 91, 146, 0.12);
     transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 1px solid rgba(214, 120, 172, 0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
   }
 
-  /* Slide in when open */
   .nav-menu.open {
     right: 0;
   }
@@ -184,8 +188,10 @@ body::after {
   .nav-menu ul {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
+    padding: 0;
+    list-style: none;
   }
 
   .nav-menu ul li {
@@ -193,28 +199,35 @@ body::after {
   }
 
   .nav-menu ul li a {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
     display: block;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid rgba(214, 120, 172, 0.1);
     color: #2d1a24;
+    white-space: nowrap;              /* wrap aagaathu */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .nav-menu ul li a:hover { color: #d678ac; }
-  .nav-active { color: #d678ac !important; }
-
   .nav-menu > .active {
-    margin-top: 16px;
+    margin-top: 12px;
     width: 100%;
     text-align: center;
     padding: 12px;
     border-radius: 12px;
     font-size: 15px;
     white-space: nowrap;
-     overflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
+    box-sizing: border-box;
   }
+}
+
+  .nav-menu ul li a:hover { color: #d678ac; }
+  .nav-active { color: #d678ac !important; }
+
+  
 
   /* Lang buttons inside mobile menu */
   .nav-lang-mobile {
@@ -297,7 +310,29 @@ body::after {
   .hero { flex-direction: column; gap: 40px; text-align: center; }
   .hero-right { flex-direction: column; }
 }
+@media (max-width: 768px) {
+  .hero {
+    overflow: hidden;
+  }
 
+  .hero-left h1 {
+    white-space: normal !important;
+    overflow: visible !important;
+    word-break: break-word;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .booklist-wrapper {
+    overflow-x: hidden;
+  }
+
+  .booklist-item img {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+  }
+}
 /* BOOKLIST SECTION */
 .booklist-section { background-color: #b85b92; padding: 40px 60px; color: #fff; }
 .booklist-container { display: flex; align-items: center; gap: 40px; }
