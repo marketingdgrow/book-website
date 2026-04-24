@@ -11,20 +11,32 @@
 
     <!-- NAV -->
     <header class="nav">
-      <a href="index.html" class="logo">BOOKS</a>
-      <div class="nav-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="nav-active">Products</a></li>
-          <li><a href="index.html#contact-section">About</a></li>
-        </ul>
-        <button class="active" onclick="window.location.href='index.html#contact-section'">Contact</button>
-      </div>
-      <div class="lang">
-        <button>EN</button>
-        <button>TA</button>
-      </div>
-    </header>
+  <img src="./img/logo-1.png" alt="">
+
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="index.html" class="nav-active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#publisher-story-section">About</a></li>
+    </ul>
+    <div class="nav-lang-mobile">
+      <button><a href="./products.html">Order Now</a> </button>
+
+    </div>
+    <button class="active" onclick="window.location.href='#contact-section'">Contact</button>
+  </div>
+
+  <div class="lang" id="langDesktop">
+    <button> <a href="./products.html">Order Now</a></button>
+
+  </div>
+</header>
 
     <!-- DETAIL SECTION -->
     <section class="detail-section" id="detailSection">
@@ -82,17 +94,17 @@
       <div class="related-grid" id="relatedGrid"></div>
     </section>
 
-    <!-- FOOTER -->
+     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">BOOKS</div>
-          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010.</p>
+          <div class="footer-logo"><img src="./img/logo-1.png" alt=""></div>
+          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010. Serving 40,000+ students across Tamil Nadu.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/varthamanan_books/" aria-label="insta"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -100,7 +112,8 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">All Books</a></li>
-            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="#contact-section">About Us</a></li>
+            <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -110,20 +123,26 @@
             <li><a href="products.html?cat=upsc">UPSC Books</a></li>
             <li><a href="products.html?cat=ssc">SSC Books</a></li>
             <li><a href="products.html?cat=banking">Banking Books</a></li>
+            <li><a href="products.html?cat=railway">Railway Books</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Support</h5>
           <ul>
-            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Track Your Order</a></li>
             <li><a href="#">Return Policy</a></li>
             <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025 வர்த்தமானன் பதிப்பகம் · All rights reserved</p>
-        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
       </div>
     </footer>
 
@@ -136,7 +155,7 @@
           price: 575, original: 700, rating: 5,
           pages: '480', edition: '2024 Edition',
           badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/10523338-L.jpg',
+          img: './img/TN-2.webp',
           desc: 'A comprehensive guide covering Tamil Nadu Government administration, governance structure, and public policy. This book is specially designed for TNPSC Group 1, 2, and 4 aspirants. Covers all important topics including district administration, legislative procedures, and Tamil Nadu history with practice questions and previous year papers.'
         },
         {
@@ -146,7 +165,7 @@
           price: 850, original: 1000, rating: 4,
           pages: '650', edition: '2024 Edition',
           badge: 'New Arrival',
-          img: 'https://covers.openlibrary.org/b/id/11153222-L.jpg',
+          img: './img/TNPSC-4.jpg',
           desc: 'The most comprehensive UPSC Civil Services preparation guide covering Prelims and Mains syllabus. Includes Indian Polity, History, Geography, Economy, Science & Technology, and Current Affairs. Features 2000+ practice MCQs, previous year papers with solutions, and topic-wise analysis of exam trends.'
         },
         {
@@ -156,7 +175,7 @@
           price: 490, original: 600, rating: 3,
           pages: '420', edition: '2024 Edition',
           badge: 'Popular',
-          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg',
+          img: './img/SSC-4.webp',
           desc: 'Complete preparation material for SSC CGL Tier I and Tier II examinations. Covers Quantitative Aptitude, English Language, Reasoning Ability, and General Awareness. Includes shortcuts, tricks, and time management strategies to maximize your score in the SSC CGL exam.'
         },
         {
@@ -166,7 +185,7 @@
           price: 620, original: 750, rating: 5,
           pages: '580', edition: '2024 Edition',
           badge: 'Top Rated',
-          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg',
+          img: './img/BANK-1.jpg',
           desc: 'The ultimate preparation guide for Bank PO examinations including SBI PO and IBPS PO. Covers Reasoning, Quantitative Aptitude, English, General Awareness, and Computer Knowledge. Features descriptive writing guidance, mock interview tips, and 15 full-length mock tests.'
         },
         {
@@ -176,7 +195,7 @@
           price: 450, original: 550, rating: 4,
           pages: '380', edition: '2024 Edition',
           badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg',
+          img: './img/police.jpg',
           desc: 'Comprehensive preparation for Tamil Nadu Police Constable written examination. Covers Tamil language, General Knowledge, Mathematics, and Science as per the latest TNUSRB syllabus. Includes physical fitness test guidelines, previous year papers, and mock tests with detailed solutions.'
         },
         {
@@ -186,7 +205,7 @@
           price: 530, original: 650, rating: 4,
           pages: '500', edition: '2024 Edition',
           badge: 'New Edition',
-          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg',
+          img: './img/RRB-2.jpg',
           desc: 'Complete preparation guide for RRB NTPC CBT 1 and CBT 2 examinations. Covers Mathematics, General Intelligence, General Awareness, and General Science. Includes topic-wise practice questions, 10 full mock tests, and previous year question papers with solutions.'
         },
         {
@@ -196,7 +215,7 @@
           price: 695, original: 850, rating: 5,
           pages: '560', edition: '2024 Edition',
           badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg',
+          img: './img/TNPSC-3.jpg',
           desc: 'The definitive guide for TNPSC Group 2 and Group 2A (Interview and Non-Interview posts). Covers General Studies (Unit 1–8), Aptitude & Mental Ability, and General Tamil/English. Special focus on Tamil Nadu history, culture, and contemporary issues with model question papers.'
         },
         {
@@ -206,7 +225,7 @@
           price: 780, original: 950, rating: 5,
           pages: '620', edition: '2024 Edition',
           badge: 'Top Rated',
-          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg',
+          img: './img/UPSC-2.jpg',
           desc: 'Specialized guide covering Indian History from Ancient to Modern era and Indian Polity for UPSC Civil Services Preliminary Examination. Includes art and culture, freedom struggle, constitutional development, and political system with 3000+ practice MCQs and chapter summaries.'
         },
         {
@@ -216,7 +235,7 @@
           price: 420, original: 500, rating: 4,
           pages: '360', edition: '2024 Edition',
           badge: 'Popular',
-          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg',
+          img: './img/SS-4.webp',
           desc: 'Complete preparation material for SSC Multi Tasking Staff (MTS) examination. Covers Numerical & Mathematical Ability, Reasoning, English Language, and General Awareness. Includes Paper 1 and Paper 2 (descriptive) preparation with sample essays and letter writing practice.'
         },
       ];
@@ -277,5 +296,34 @@
         </a>
       `).join('');
     </script>
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburger');
+    let overlay = document.getElementById('navOverlay');
+
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.id = 'navOverlay';
+      overlay.onclick = toggleMenu;
+      document.body.appendChild(overlay);
+    }
+
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    overlay.classList.toggle('show');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Menu link click-la auto close
+  document.querySelectorAll('.nav-menu a, .nav-menu .active').forEach(el => {
+    el.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('open')) toggleMenu();
+    });
+  });
+</script>
+    <script src="./animations.js"></script>
   </body>
 </html>

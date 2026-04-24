@@ -10,21 +10,33 @@
   <body>
 
     <!-- NAV -->
-    <header class="nav">
-      <a href="index.html" class="logo">BOOKS</a>
-      <div class="nav-menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="nav-active">Products</a></li>
-          <li><a href="index.html#contact-section">About</a></li>
-        </ul>
-        <button class="active" onclick="window.location.href='index.html#contact-section'">Contact</button>
-      </div>
-      <div class="lang">
-        <button onclick="filterLang('en')">EN</button>
-        <button onclick="filterLang('ta')">TA</button>
-      </div>
-    </header>
+     <header class="nav">
+  <img src="./img/logo-1.png" alt="">
+
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="index.html" class="nav-active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="./index.html#publisher-story-section">About</a></li>
+    </ul>
+    <div class="nav-lang-mobile">
+      <button onclick="setLang('en')">Order Now</button>
+
+    </div>
+    <button class="active" onclick="window.location.href='#contact-section'">Contact</button>
+  </div>
+
+  <div class="lang" id="langDesktop">
+    <button onclick="setLang('en')">Order Now</button>
+
+  </div>
+</header>
 
     <!-- PRODUCTS HERO -->
     <section class="products-hero">
@@ -46,17 +58,17 @@
     <!-- PRODUCTS GRID -->
     <div class="products-grid" id="productsGrid"></div>
 
-    <!-- FOOTER -->
+     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">BOOKS</div>
-          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010.</p>
+          <div class="footer-logo"><img src="./img/logo-1.png" alt=""></div>
+          <p>வர்த்தமானன் பதிப்பகம் — Your trusted partner for government exam preparation since 2010. Serving 40,000+ students across Tamil Nadu.</p>
           <div class="footer-social">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/varthamanan_books/" aria-label="insta"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -64,16 +76,18 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">All Books</a></li>
-            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="#contact-section">About Us</a></li>
+            <li><a href="#contact-section">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Exam Categories</h5>
           <ul>
-            <li><a href="#">TNPSC Books</a></li>
-            <li><a href="#">UPSC Books</a></li>
-            <li><a href="#">SSC Books</a></li>
-            <li><a href="#">Banking Books</a></li>
+            <li><a href="products.html?cat=tnpsc">TNPSC Books</a></li>
+            <li><a href="products.html?cat=upsc">UPSC Books</a></li>
+            <li><a href="products.html?cat=ssc">SSC Books</a></li>
+            <li><a href="products.html?cat=banking">Banking Books</a></li>
+            <li><a href="products.html?cat=railway">Railway Books</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -82,12 +96,17 @@
             <li><a href="#">Track Your Order</a></li>
             <li><a href="#">Return Policy</a></li>
             <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025 வர்த்தமானன் பதிப்பகம் · All rights reserved</p>
-        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
       </div>
     </footer>
 
@@ -99,72 +118,75 @@
           author: 'வர்த்தமானன் பதிப்பகம்',
           price: 575, original: 700, rating: 5,
           badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/10523338-L.jpg'
+          img: './img/TNPSC-1.jpg'
         },
+
         {
           id: 2, category: 'upsc',
           title: 'UPSC Civil Services Complete Guide',
           author: 'வர்த்தமானன் பதிப்பகம்',
           price: 850, original: 1000, rating: 4,
           badge: 'New Arrival',
-          img: 'https://covers.openlibrary.org/b/id/11153222-L.jpg'
+          img: './img/UPSC-1.jpg'
         },
+
         {
           id: 3, category: 'ssc',
           title: 'SSC Combined Graduate Level Exam Master',
           author: 'வர்த்தமானன் பதிப்பகம்',
           price: 490, original: 600, rating: 3,
           badge: 'Popular',
-          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg'
+          img: './img/SSC-1.jpg'
         },
-        {
-          id: 4, category: 'banking',
-          title: 'SBI & IBPS Bank PO Complete Preparation',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 620, original: 750, rating: 5,
-          badge: 'Top Rated',
-          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
-        },
-        {
-          id: 5, category: 'police',
-          title: 'Tamil Nadu Police Constable Exam Guide',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 450, original: 550, rating: 4,
-          badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg'
-        },
-        {
-          id: 6, category: 'railway',
-          title: 'RRB NTPC Railway Recruitment Board Guide',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 530, original: 650, rating: 4,
-          badge: 'New Edition',
-          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
-        },
-        {
-          id: 7, category: 'tnpsc',
-          title: 'TNPSC Group 2 & 2A Comprehensive Guide',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 695, original: 850, rating: 5,
-          badge: 'Best Seller',
-          img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
-        },
-        {
-          id: 8, category: 'upsc',
-          title: 'Indian History & Polity for UPSC Prelims',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 780, original: 950, rating: 5,
-          badge: 'Top Rated',
-          img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg'
-        },
-        {
-          id: 9, category: 'ssc',
-          title: 'SSC MTS Multi Tasking Staff Complete Book',
-          author: 'வர்த்தமானன் பதிப்பகம்',
-          price: 420, original: 500, rating: 4,
-          badge: 'Popular',
-          img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
-        },
+
+        // {
+        //   id: 4, category: 'banking',
+        //   title: 'SBI & IBPS Bank PO Complete Preparation',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 620, original: 750, rating: 5,
+        //   badge: 'Top Rated',
+        //   img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
+        // },
+        // {
+        //   id: 5, category: 'police',
+        //   title: 'Tamil Nadu Police Constable Exam Guide',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 450, original: 550, rating: 4,
+        //   badge: 'Best Seller',
+        //   img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg'
+        // },
+        // {
+        //   id: 6, category: 'railway',
+        //   title: 'RRB NTPC Railway Recruitment Board Guide',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 530, original: 650, rating: 4,
+        //   badge: 'New Edition',
+        //   img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
+        // },
+        // {
+        //   id: 7, category: 'tnpsc',
+        //   title: 'TNPSC Group 2 & 2A Comprehensive Guide',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 695, original: 850, rating: 5,
+        //   badge: 'Best Seller',
+        //   img: 'https://covers.openlibrary.org/b/id/10521267-L.jpg'
+        // },
+        // {
+        //   id: 8, category: 'upsc',
+        //   title: 'Indian History & Polity for UPSC Prelims',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 780, original: 950, rating: 5,
+        //   badge: 'Top Rated',
+        //   img: 'https://covers.openlibrary.org/b/id/10594765-L.jpg'
+        // },
+        // {
+        //   id: 9, category: 'ssc',
+        //   title: 'SSC MTS Multi Tasking Staff Complete Book',
+        //   author: 'வர்த்தமானன் பதிப்பகம்',
+        //   price: 420, original: 500, rating: 4,
+        //   badge: 'Popular',
+        //   img: 'https://covers.openlibrary.org/b/id/10909258-L.jpg'
+        // },
       ];
 
       function stars(n) {
@@ -192,6 +214,12 @@
             </div>
           </a>
         `).join('');
+        requestAnimationFrame(() => {
+    document.querySelectorAll('.product-card').forEach((card, i) => {
+      card.style.transitionDelay = (i * 0.06) + 's';
+      card.classList.add('va-visible');
+    });
+  });
       }
 
       function filterBooks(cat, btn) {
@@ -214,5 +242,34 @@
         renderBooks(books);
       }
     </script>
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    const btn = document.getElementById('hamburger');
+    let overlay = document.getElementById('navOverlay');
+
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'nav-overlay';
+      overlay.id = 'navOverlay';
+      overlay.onclick = toggleMenu;
+      document.body.appendChild(overlay);
+    }
+
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    overlay.classList.toggle('show');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Menu link click-la auto close
+  document.querySelectorAll('.nav-menu a, .nav-menu .active').forEach(el => {
+    el.addEventListener('click', () => {
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('open')) toggleMenu();
+    });
+  });
+</script>
+    <script src="./animations.js"></script>
   </body>
 </html>
