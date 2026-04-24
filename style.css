@@ -12,6 +12,10 @@ body {
   background: #f6f2ed;
   overflow-x: hidden;
 }
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
 /* Grid Layer */
 body::before {
@@ -4016,6 +4020,14 @@ h1 span, h2 span, h3 span, h4 span, h5 span,
   z-index: 0;
   transition: transform 0.12s ease;
   will-change: transform;
+}
+
+.lang button a{
+  text-decoration: none;
+}
+.nav-lang-mobile button a {
+  text-decoration: none;
+  color: white;
 }
 
 
